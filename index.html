@@ -6,19 +6,28 @@
   <title>Work in Progress</title>
   <style>
     body {
-  font-family: 'Poppins', Arial, sans-serif;
-}
-    body {
+      font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #d00000;
       color: white;
-      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
+      background: linear-gradient(45deg, #d00000, #ff6f61);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
     }
 
     .container {
@@ -26,8 +35,18 @@
     }
 
     .logo {
-      width: 350px; /* Larger than heading */
+      width: 350px;
       margin-bottom: 30px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     h1 {
@@ -38,67 +57,20 @@
     p {
       font-size: 1.2rem;
     }
-    body {
-  background: linear-gradient(45deg, #d00000, #ff6f61);
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
-}
 
-@keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-    .logo {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .logo {
+        width: 200px;
+      }
+    }
   </style>
-  <div id="loader"></div>
-<style>
-  #loader {
-    border: 10px solid #ffffff;
-    border-top: 10px solid #d00000;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: auto;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @media (max-width: 600px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  .logo {
-    width: 200px;
-  }
-}
-</style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <div class="container">
